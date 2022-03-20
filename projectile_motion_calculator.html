@@ -12,16 +12,19 @@
         <div class="calculator-wrapper">
           <div>
             <div class="title jfc">
-              <div class="inner">입력 (θ, y0, v0, g)</div>
+              <div class="inner">입력 (θ, y0, v0, R', g)</div>
             </div>
             <div class="">
-              <input placeholder="각도" autofocus type="number" required step="0.001" min="0" max="90" class="num-input" id="theta">
+              <input placeholder="경사각" autofocus type="number" required step="0.001" min="0" max="90" class="num-input" id="theta">
             </div>
             <div class="">
               <input placeholder="초기 높이" type="number" min="0" step="0.001" required class="num-input" id="y0">
             </div>
             <div class="">
               <input placeholder="초기 속도" type="number" step="0.001" required min="0" class="num-input" id="v0">
+            </div>
+            <div class="">
+              <input placeholder="실제 도달거리" type="number" step="0.001" required min="0" class="num-input" id="realR">
             </div>
             <div class="">
               <input placeholder="중력 가속도" type="number" step="0.001" required min="0" class="num-input" id="g">
@@ -37,8 +40,10 @@
             <div class="result-c">
               <div class="jfc" id="tresult"></div>
               <div class="jfc" id="rrresult"></div>
+              <div class="jfc" id="mresult"></div>
               <div class="jfc" id="result"></div>
               <div class="jfc" id="rresult"></div>
+              <div class="jfc" id="errresult"></div>
             </div>
           </div>
         </div>
