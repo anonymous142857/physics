@@ -27,7 +27,7 @@ function calculate() {
   let y0 = Number(sy0);
   let g = Number(sg);
   if (v0 === NaN || theta === NaN || y0 === NaN || g === NaN) return;
-  if (v0 < 0 || theta < 0 || y0 < 0 || g < 0) return;
+  if (v0 <= 0 || theta <= 0 || theta >= 90 || y0 < 0 || g <= 0) return;
 
   let rad = theta * Math.PI / 180;
 
@@ -36,8 +36,8 @@ function calculate() {
   let dr = rr-r;
   let dt = dr / (v0 * Math.cos(rad));
 
-  dresult.innerHTML = '수평 도달 거리: ' + round(r) + 'm';
-  drresult.innerHTML = '실제 도달 거리: ' + round(rr) + 'm';
-  dtresult.innerHTML = '추가 진행 시간: ' + round(dt) + 's';
-  drrresult.innerHTML = '추가 도달 거리: ' + round(dr) + 'm';
+  dresult.innerHTML = '수평도달거리: ' + round(r) + 'm';
+  drresult.innerHTML = '실제도달거리: ' + round(rr) + 'm';
+  dtresult.innerHTML = '추가 진행시간: ' + round(dt) + 's';
+  drrresult.innerHTML = '추가 도달거리: ' + round(dr) + 'm';
 }
